@@ -98,6 +98,36 @@ masscan-mcp <masscan>
     }
 ```
 
+### nmap MCP Server
+A server implementation that wraps the nmap scanning tool, allowing it to be used through the MCP interface.
+
+#### Features
+- Target based port scanning 
+- Support for all nmap command line arguments
+
+#### Parameters
+- `target`: Target ìp to fuzz
+- `nmap_args`: Array of additional nmap arguments
+
+
+#### Usage
+```bash
+nmap-mcp <nmap binary>
+```
+
+#### Claude Configuration
+
+```json
+ "nmap": {
+      "command": "node",
+      "args": [
+        "/path/to/build/index.js",
+        "nmap"
+      ]
+    }
+```
+
+
 ## TO-DO Tools 
 - amass
 - massdns
