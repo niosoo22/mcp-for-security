@@ -25,7 +25,7 @@ SQLMap MCP enables seamless integration of SQLMap's powerful SQL injection testi
 
 1. Clone this repository:
    ```
-   git clone <repository-url>
+   git clone https://github.com/cyproxio/mcp-for-security
    cd sqlmap-mcp
    ```
 
