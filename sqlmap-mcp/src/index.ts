@@ -19,7 +19,7 @@ server.tool(
     "do-sqlmap",
     "Run sqlmap with specified URL",
     {
-        url: z.string().url().describe("Target URL to fuzz"),
+        url: z.string().url().describe("Target URL to detect SQL Injection"),
         sqlmap_args: z.array(z.string()).describe(`Additional SQLmap arguments 
             
             -g GOOGLEDORK       Process Google dork results as target URLs
@@ -133,7 +133,7 @@ server.tool(
 async function main() {
     const transport = new StdioServerTransport();
     await server.connect(transport);
-    console.error("Fuzzer MCP Server running on stdio");
+    console.error("sqlmap MCP Server running on stdio");
 }
 
 main().catch((error) => {
