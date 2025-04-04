@@ -128,6 +128,40 @@ nmap-mcp <nmap binary>
 ```
 
 
+### Mobsf MCP Server
+A server implementation that wraps the Mobsf tool, allowing it to be used through the MCP interface.
+
+#### Features
+- MobSF functionality exposed through MCP
+- Simple configuration and setup
+- Easy integration with other MCP-compatible tools and systems
+- Standardized input/output handling
+- Support for Android (APK), iOS (IPA), and Windows (APPX) mobile applications
+
+#### Parameters
+- `base_url`:  The MobSF server URL (e.g., `http://localhost:8000`)
+- `api_key `: Your MobSF API key
+
+
+#### Usage
+```bash
+mobsf-mcp <base_url> <api_key>
+```
+
+#### Claude Configuration
+
+```json
+ "mobsf": {
+      "command": "node",
+      "args": [
+         "/path/to/build/index.js",
+        "http://127.0.0.1:8000",
+        "<api key>"
+      ]
+    }
+```
+
+
 ## TO-DO Tools 
 - amass
 - massdns
