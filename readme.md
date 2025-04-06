@@ -194,6 +194,39 @@ nuclei-mcp <nuclei>
 ```
 
 
+### Sslcan MCP Server
+A server implementation that wraps the sslscan tool, allowing it to be used through the MCP interface.
+
+#### Features
+- Full SSLScan functionality exposed through MCP
+- Simple configuration and setup
+- Easy integration with other MCP-compatible tools and systems
+- Standardized input/output handling
+- Support for all SSLScan options and configurations
+
+#### Parameters
+- `target`: The target URL to scan (required)
+- `sslscan_args`: Array of additional sslscan arguments
+
+
+#### Usage
+```bash
+sslscan-mcp <sslscan>
+```
+
+#### Claude Configuration
+
+```json
+ "sslscan": {
+      "command": "node",
+      "args": [
+        "/path/to/build/index.js",
+        "<sslscan>"
+      ]
+    }
+```
+
+
 ## TO-DO Tools 
 - amass
 - massdns
