@@ -162,11 +162,42 @@ mobsf-mcp <base_url> <api_key>
 ```
 
 
+### Nuclei MCP Server
+A server implementation that wraps the nuclei tool, allowing it to be used through the MCP interface.
+
+#### Features
+- Simple configuration and setup
+- Easy integration with other MCP-compatible tools and systems
+- Standardized input/output handling
+- Access to Nuclei's extensive template library
+
+#### Parameters
+- `url`: The target URL to scan (required)
+- `tags`: Comma-separated list of template tags to filter which checks to run (optional)
+
+
+#### Usage
+```bash
+nuclei-mcp <nuclei>
+```
+
+#### Claude Configuration
+
+```json
+ "nuclei": {
+      "command": "node",
+      "args": [
+        "/path/to/build/index.js",
+        "</usr/local/go/bin/nuclei>"
+      ]
+    }
+```
+
+
 ## TO-DO Tools 
 - amass
 - massdns
 - gowitness
-- nuclei
 - httpx
 - ...
 
