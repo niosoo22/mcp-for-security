@@ -227,6 +227,38 @@ sslscan-mcp <sslscan>
 ```
 
 
+### HTTP Headers Security MCP
+A server implementation that wraps the http security headers , allowing it to be used through the MCP interface.
+
+#### Features
+- Analysis of HTTP response headers against OWASP security standards
+- Identification of security headers that should be removed
+- Recommendations for missing security headers that should be added
+- Simple configuration and setup
+- Easy integration with other MCP-compatible tools and systems
+- Standardized input/output handling
+
+#### Parameters
+- `target`: The target URL to analyze http headers (required)
+
+
+#### Usage
+```bash
+http-headers-security-mcp 
+```
+
+#### Claude Configuration
+
+```json
+ "http_header_analyze": {
+      "command": "node",
+      "args": [
+        "/path/to/build/index.js"
+      ]
+    }
+```
+
+
 ## TO-DO Tools 
 - amass
 - massdns
