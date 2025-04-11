@@ -259,6 +259,38 @@ http-headers-security-mcp
 ```
 
 
+### waybackurls MCP
+A server implementation that retrives the historical URLs from the Wayback Machine, allowing it to be used through the MCP interface.
+
+#### Features
+- Integration with Waybackurls to fetch historical URLs from the Wayback Machine
+- Option to include or exclude subdomains in the search
+- Simple configuration and setup
+- Easy integration with other MCP-compatible tools and systems
+- Standardized input/output handling
+
+#### Parameters
+- `target`: The domain to retrieve historical URLs for (required)
+- `noSub`: Boolean flag to control whether subdomains should be included (default: false)
+
+
+#### Usage
+```bash
+waybackurls-mcp <waybackurls binary>
+```
+
+#### Claude Configuration
+
+```json
+ "waybackurls": {
+      "command": "node",
+      "args": [
+        "/path/to/build/index.js",
+        "waybackurls"
+      ]
+    }
+```
+
 ## TO-DO Tools 
 - amass
 - massdns
