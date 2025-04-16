@@ -291,6 +291,39 @@ waybackurls-mcp <waybackurls binary>
     }
 ```
 
+### alterx MCP
+A server implementation that wraps the alterx tool, allowing it to be used through the MCP interface.
+
+#### Features
+- Pattern-based wordlist generation for subdomain discovery
+- Support for multiple permutation patterns and strategies
+- Simple configuration and setup
+- Easy integration with other MCP-compatible tools and systems
+
+#### Parameters
+- `domain`: The target domain or subdomains to use as a base for creating permutations (required)
+- `pattern`: The pattern template to use for generating wordlist variations (required)
+- `outputFilePath`: Path where the generated wordlist should be saved (optional)
+
+
+
+#### Usage
+```bash
+alterx-mcp <alterx binary>
+```
+
+#### Claude Configuration
+
+```json
+ "alterx": {
+      "command": "node",
+      "args": [
+        "/path/to/build/index.js",
+        "alterx"
+      ]
+    }
+```
+
 ## TO-DO Tools 
 - amass
 - massdns
