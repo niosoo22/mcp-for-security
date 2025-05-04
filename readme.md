@@ -2,330 +2,62 @@
 
 This repository contains Model Context Protocol (MCP) server implementations for various security testing tools, making them accessible through a standardized interface.
 
-## Tools
+## Available Tools
+
+| Tool | Description | Detailed Documentation |
+|------|-------------|------------------------|
+| FFUF | Web content fuzzing tool for discovering hidden files and directories | [FFUF MCP Documentation](./ffuf-mcp/) |
+| SQLmap | Advanced SQL injection detection and exploitation tool | [SQLmap MCP Documentation](./sqlmap-mcp/) |
+| Masscan | Fast port scanner for large-scale network discovery | [Masscan MCP Documentation](./masscan-mcp/) |
+| Nmap | Comprehensive network scanning tool for service and vulnerability discovery | [Nmap MCP Documentation](./nmap-mcp/) |
+| MobSF | Mobile security framework for analyzing mobile applications | [MobSF MCP Documentation](./mobsf-mcp/) |
+| Nuclei | Vulnerability scanner using custom templates | [Nuclei MCP Documentation](./nuclei-mcp/) |
+| SSLScan | SSL/TLS configuration analyzer for security assessment | [SSLScan MCP Documentation](./sslscan-mcp/) |
+| HTTP Headers Security | Analyzer for HTTP security headers against OWASP standards | [HTTP Headers MCP Documentation](./http-headers-mcp/) |
+| Waybackurls | Tool for retrieving historical URLs from the Wayback Machine | [Waybackurls MCP Documentation](./waybackurls-mcp/) |
+| Alterx | Pattern-based wordlist generator for subdomain discovery | [Alterx MCP Documentation](./alterx-mcp/) |
+| Certificate Search (crt.sh) | Subdomain discovery tool using SSL certificate logs | [Certificate Search MCP Documentation](./crtsh-mcp/) |
+| Amass | Advanced subdomain enumeration and reconnaissance tool | [Amass MCP Documentation](./amass-mcp) |
+
+## Quick Reference
 
 ### FFUF MCP Server
-A server implementation that wraps the FFUF fuzzing tool, allowing it to be used through the MCP interface.
-
-#### Features
-- URL-based fuzzing
-- Support for all FFUF command line arguments
-
-#### Parameters
-- `url`: Target URL to fuzz
-- `ffuf_args`: Array of additional FFUF arguments
-
-
-#### Usage
-```bash
-ffuf-mcp <ffuf binary>
-```
-
-#### Claude Configuration
-
-```json
- "ffuf": {
-      "command": "node",
-      "args": [
-        "/path/to/build/index.js",
-        "ffuf"
-      ]
-    }
-```
+URL-based fuzzing tool with support for all FFUF command line arguments.
 
 ### SQLmap MCP Server
-A server implementation that wraps the SQLmap SQL injection testing tool, allowing it to be used through the MCP interface.
-
-#### Features
-- URL-based SQL injection testing
-- Support for all SQLmap command line arguments
-- Error handling and status reporting
-- Comprehensive SQL injection testing capabilities
-
-#### Parameters
-- `url`: Target URL to test for SQL injection
-- `sqlmap_args`: Array of additional SQLmap arguments
-
-
-#### Usage
-```bash
-sqlmap-mcp <sqlmap binary or python3 sqlmap>
-```
-
-
-#### Claude Configuration
-
-```json
- "sqlmap": {
-      "command": "node",
-      "args": [
-        "/path/to/build/index.js",
-        "sqlmap"
-      ]
-    }
-```
-
+SQL injection testing tool with comprehensive capabilities for vulnerability discovery.
 
 ### Masscan MCP Server
-A server implementation that wraps the Masscan tool, allowing it to be used through the MCP interface.
+Fast port scanning tool for target-based port discovery across networks.
 
-#### Features
-- Target based Port Scanning
-- Support for all Masscan command line arguments
-- Error handling and status reporting
+### Nmap MCP Server
+Full-featured network scanner with detailed service fingerprinting and vulnerability detection.
 
-#### Parameters
-- `target`: Target ip to scanning ports 
-- `port`: Port nubmers to target ip 
-- `masscan_args`: Array of additional masscan arguments
-
-
-#### Usage
-```bash
-masscan-mcp <masscan>
-```
-
-
-#### Claude Configuration
-
-```json
- "masscan": {
-      "command": "node",
-      "args": [
-        "/path/to/build/index.js",
-        "masscan"
-      ]
-    }
-```
-
-### nmap MCP Server
-A server implementation that wraps the nmap scanning tool, allowing it to be used through the MCP interface.
-
-#### Features
-- Target based port scanning 
-- Support for all nmap command line arguments
-
-#### Parameters
-- `target`: Target ìp to fuzz
-- `nmap_args`: Array of additional nmap arguments
-
-
-#### Usage
-```bash
-nmap-mcp <nmap binary>
-```
-
-#### Claude Configuration
-
-```json
- "nmap": {
-      "command": "node",
-      "args": [
-        "/path/to/build/index.js",
-        "nmap"
-      ]
-    }
-```
-
-
-### Mobsf MCP Server
-A server implementation that wraps the Mobsf tool, allowing it to be used through the MCP interface.
-
-#### Features
-- MobSF functionality exposed through MCP
-- Simple configuration and setup
-- Easy integration with other MCP-compatible tools and systems
-- Standardized input/output handling
-- Support for Android (APK), iOS (IPA), and Windows (APPX) mobile applications
-
-#### Parameters
-- `base_url`:  The MobSF server URL (e.g., `http://localhost:8000`)
-- `api_key `: Your MobSF API key
-
-
-#### Usage
-```bash
-mobsf-mcp <base_url> <api_key>
-```
-
-#### Claude Configuration
-
-```json
- "mobsf": {
-      "command": "node",
-      "args": [
-         "/path/to/build/index.js",
-        "http://127.0.0.1:8000",
-        "<api key>"
-      ]
-    }
-```
-
+### MobSF MCP Server
+Mobile application security testing framework for Android, iOS, and Windows applications.
 
 ### Nuclei MCP Server
-A server implementation that wraps the nuclei tool, allowing it to be used through the MCP interface.
+Template-based vulnerability scanner with an extensive library of security checks.
 
-#### Features
-- Simple configuration and setup
-- Easy integration with other MCP-compatible tools and systems
-- Standardized input/output handling
-- Access to Nuclei's extensive template library
-
-#### Parameters
-- `url`: The target URL to scan (required)
-- `tags`: Comma-separated list of template tags to filter which checks to run (optional)
-
-
-#### Usage
-```bash
-nuclei-mcp <nuclei>
-```
-
-#### Claude Configuration
-
-```json
- "nuclei": {
-      "command": "node",
-      "args": [
-        "/path/to/build/index.js",
-        "</usr/local/go/bin/nuclei>"
-      ]
-    }
-```
-
-
-### Sslcan MCP Server
-A server implementation that wraps the sslscan tool, allowing it to be used through the MCP interface.
-
-#### Features
-- Full SSLScan functionality exposed through MCP
-- Simple configuration and setup
-- Easy integration with other MCP-compatible tools and systems
-- Standardized input/output handling
-- Support for all SSLScan options and configurations
-
-#### Parameters
-- `target`: The target URL to scan (required)
-- `sslscan_args`: Array of additional sslscan arguments
-
-
-#### Usage
-```bash
-sslscan-mcp <sslscan>
-```
-
-#### Claude Configuration
-
-```json
- "sslscan": {
-      "command": "node",
-      "args": [
-        "/path/to/build/index.js",
-        "<sslscan>"
-      ]
-    }
-```
-
+### SSLScan MCP Server
+SSL/TLS configuration analyzer for identifying weak ciphers and security misconfigurations.
 
 ### HTTP Headers Security MCP
-A server implementation that wraps the http security headers , allowing it to be used through the MCP interface.
+Analyzes HTTP response headers against OWASP security standards with recommendations.
 
-#### Features
-- Analysis of HTTP response headers against OWASP security standards
-- Identification of security headers that should be removed
-- Recommendations for missing security headers that should be added
-- Simple configuration and setup
-- Easy integration with other MCP-compatible tools and systems
-- Standardized input/output handling
+### Waybackurls MCP
+Retrieves historical URLs from the Wayback Machine to discover forgotten endpoints.
 
-#### Parameters
-- `target`: The target URL to analyze http headers (required)
+### Alterx MCP
+Generates custom wordlists for subdomain discovery using pattern-based permutations.
 
+### Certificate Search (crt.sh) MCP
+Discovers subdomains by querying SSL certificate transparency logs without active scanning.
 
-#### Usage
-```bash
-http-headers-security-mcp 
-```
-
-#### Claude Configuration
-
-```json
- "http_header_analyze": {
-      "command": "node",
-      "args": [
-        "/path/to/build/index.js"
-      ]
-    }
-```
-
-
-### waybackurls MCP
-A server implementation that retrives the historical URLs from the Wayback Machine, allowing it to be used through the MCP interface.
-
-#### Features
-- Integration with Waybackurls to fetch historical URLs from the Wayback Machine
-- Option to include or exclude subdomains in the search
-- Simple configuration and setup
-- Easy integration with other MCP-compatible tools and systems
-- Standardized input/output handling
-
-#### Parameters
-- `target`: The domain to retrieve historical URLs for (required)
-- `noSub`: Boolean flag to control whether subdomains should be included (default: false)
-
-
-#### Usage
-```bash
-waybackurls-mcp <waybackurls binary>
-```
-
-#### Claude Configuration
-
-```json
- "waybackurls": {
-      "command": "node",
-      "args": [
-        "/path/to/build/index.js",
-        "waybackurls"
-      ]
-    }
-```
-
-### alterx MCP
-A server implementation that wraps the alterx tool, allowing it to be used through the MCP interface.
-
-#### Features
-- Pattern-based wordlist generation for subdomain discovery
-- Support for multiple permutation patterns and strategies
-- Simple configuration and setup
-- Easy integration with other MCP-compatible tools and systems
-
-#### Parameters
-- `domain`: The target domain or subdomains to use as a base for creating permutations (required)
-- `pattern`: The pattern template to use for generating wordlist variations (required)
-- `outputFilePath`: Path where the generated wordlist should be saved (optional)
-
-
-
-#### Usage
-```bash
-alterx-mcp <alterx binary>
-```
-
-#### Claude Configuration
-
-```json
- "alterx": {
-      "command": "node",
-      "args": [
-        "/path/to/build/index.js",
-        "alterx"
-      ]
-    }
-```
+### Amass MCP
+Advanced reconnaissance tool for subdomain enumeration and intelligence gathering with both passive and active modes.
 
 ## TO-DO Tools 
-- amass
 - massdns
 - gowitness
 - httpx
@@ -340,4 +72,14 @@ The project uses TypeScript and the Model Context Protocol SDK. To contribute:
 3. Make your changes
 4. Submit a pull request
 
+## Installation
+
+For installation instructions for each tool, please refer to the individual documentation linked in the table above.
+
+## Usage
+
+Each tool has specific parameters and usage instructions. For detailed information, see the documentation for the specific tool you want to use.
+
 ## License
+
+[Your license information here]
