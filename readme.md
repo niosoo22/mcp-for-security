@@ -18,6 +18,7 @@ This repository contains Model Context Protocol (MCP) server implementations for
 | Alterx | Pattern-based wordlist generator for subdomain discovery | [Alterx MCP Documentation](./alterx-mcp/) |
 | Certificate Search (crt.sh) | Subdomain discovery tool using SSL certificate logs | [Certificate Search MCP Documentation](./crtsh-mcp/) |
 | Amass | Advanced subdomain enumeration and reconnaissance tool | [Amass MCP Documentation](./amass-mcp) |
+| httpx | Fast and multi-purpose HTTP toolkit for port scanning. | [Amass MCP Documentation](./httpx-mcp) |
 
 ## Quick Reference
 
@@ -57,10 +58,12 @@ Discovers subdomains by querying SSL certificate transparency logs without activ
 ### Amass MCP
 Advanced reconnaissance tool for subdomain enumeration and intelligence gathering with both passive and active modes.
 
+### httpx MCP
+Performs high-speed probing of discovered subdomains to validate alive hosts, fetch response details, and enrich reconnaissance data without heavy scanning.
+
 ## TO-DO Tools 
 - massdns
 - gowitness
-- httpx
 - ...
 
 ## Development
