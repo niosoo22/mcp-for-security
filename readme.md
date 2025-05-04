@@ -84,5 +84,3 @@ For installation instructions for each tool, please refer to the individual docu
 Each tool has specific parameters and usage instructions. For detailed information, see the documentation for the specific tool you want to use.
 
 ## License
-
-[Your license information here]
