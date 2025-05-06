@@ -19,6 +19,7 @@ This repository contains Model Context Protocol (MCP) server implementations for
 | Certificate Search (crt.sh) | Subdomain discovery tool using SSL certificate logs | [Certificate Search MCP Documentation](./crtsh-mcp/) |
 | Amass | Advanced subdomain enumeration and reconnaissance tool | [Amass MCP Documentation](./amass-mcp) |
 | httpx | Fast and multi-purpose HTTP toolkit for port scanning. | [httpx MCP Documentation](./httpx-mcp) |
+| shuffledns | High-speed and customizable DNS brute-forcing and resolution tool | [shuffledns MCP Documentation](./shuffledns-mcp) |
 
 ## Quick Reference
 
@@ -60,6 +61,9 @@ Advanced reconnaissance tool for subdomain enumeration and intelligence gatherin
 
 ### httpx MCP
 Performs high-speed probing of discovered subdomains to validate alive hosts, fetch response details, and enrich reconnaissance data without heavy scanning.
+
+### shuffledns MCP
+High-speed DNS brute-forcing and mass subdomain resolution tool to quickly discover valid subdomains using custom resolvers and wordlists.
 
 ## TO-DO Tools 
 - massdns
