@@ -6,68 +6,68 @@ This repository contains Model Context Protocol (MCP) server implementations for
 
 | Tool | Description | Detailed Documentation |
 |------|-------------|------------------------|
+| Amass | Advanced subdomain enumeration and reconnaissance tool | [Amass MCP Documentation](./amass-mcp) |
+| Alterx | Pattern-based wordlist generator for subdomain discovery | [Alterx MCP Documentation](./alterx-mcp/) |
+| Arjun | Run Arjun to discover hidden HTTP parameters | [Arjun MCP Documentation](./arjun-mcp) |
+| Certificate Search (crt.sh) | Subdomain discovery tool using SSL certificate logs | [Certificate Search MCP Documentation](./crtsh-mcp/) |
 | FFUF | Web content fuzzing tool for discovering hidden files and directories | [FFUF MCP Documentation](./ffuf-mcp/) |
-| SQLmap | Advanced SQL injection detection and exploitation tool | [SQLmap MCP Documentation](./sqlmap-mcp/) |
+| HTTP Headers Security | Analyzer for HTTP security headers against OWASP standards | [HTTP Headers MCP Documentation](./http-headers-security-mcp/) |
+| httpx | Fast and multi-purpose HTTP toolkit for port scanning. | [httpx MCP Documentation](./httpx-mcp) |
 | Masscan | Fast port scanner for large-scale network discovery | [Masscan MCP Documentation](./masscan-mcp/) |
-| Nmap | Comprehensive network scanning tool for service and vulnerability discovery | [Nmap MCP Documentation](./nmap-mcp/) |
 | MobSF | Mobile security framework for analyzing mobile applications | [MobSF MCP Documentation](./mobsf-mcp/) |
+| Nmap | Comprehensive network scanning tool for service and vulnerability discovery | [Nmap MCP Documentation](./nmap-mcp/) |
 | Nuclei | Vulnerability scanner using custom templates | [Nuclei MCP Documentation](./nuclei-mcp/) |
 | SSLScan | SSL/TLS configuration analyzer for security assessment | [SSLScan MCP Documentation](./sslscan-mcp/) |
-| HTTP Headers Security | Analyzer for HTTP security headers against OWASP standards | [HTTP Headers MCP Documentation](./http-headers-security-mcp/) |
-| Waybackurls | Tool for retrieving historical URLs from the Wayback Machine | [Waybackurls MCP Documentation](./waybackurls-mcp/) |
-| Alterx | Pattern-based wordlist generator for subdomain discovery | [Alterx MCP Documentation](./alterx-mcp/) |
-| Certificate Search (crt.sh) | Subdomain discovery tool using SSL certificate logs | [Certificate Search MCP Documentation](./crtsh-mcp/) |
-| Amass | Advanced subdomain enumeration and reconnaissance tool | [Amass MCP Documentation](./amass-mcp) |
-| httpx | Fast and multi-purpose HTTP toolkit for port scanning. | [httpx MCP Documentation](./httpx-mcp) |
 | shuffledns | High-speed and customizable DNS brute-forcing and resolution tool | [shuffledns MCP Documentation](./shuffledns-mcp) |
-| arjun | Run Arjun to discover hidden HTTP parameters | [Arjun MCP Documentation](./arjun-mcp) |
+| SQLmap | Advanced SQL injection detection and exploitation tool | [SQLmap MCP Documentation](./sqlmap-mcp/) |
+| Waybackurls | Tool for retrieving historical URLs from the Wayback Machine | [Waybackurls MCP Documentation](./waybackurls-mcp/) |
 
 ## Quick Reference
 
-### FFUF MCP Server
-URL-based fuzzing tool with support for all FFUF command line arguments.
-
-### SQLmap MCP Server
-SQL injection testing tool with comprehensive capabilities for vulnerability discovery.
-
-### Masscan MCP Server
-Fast port scanning tool for target-based port discovery across networks.
-
-### Nmap MCP Server
-Full-featured network scanner with detailed service fingerprinting and vulnerability detection.
-
-### MobSF MCP Server
-Mobile application security testing framework for Android, iOS, and Windows applications.
-
-### Nuclei MCP Server
-Template-based vulnerability scanner with an extensive library of security checks.
-
-### SSLScan MCP Server
-SSL/TLS configuration analyzer for identifying weak ciphers and security misconfigurations.
-
-### HTTP Headers Security MCP
-Analyzes HTTP response headers against OWASP security standards with recommendations.
-
-### Waybackurls MCP
-Retrieves historical URLs from the Wayback Machine to discover forgotten endpoints.
-
-### Alterx MCP
+### Alterx MCP  
 Generates custom wordlists for subdomain discovery using pattern-based permutations.
 
-### Certificate Search (crt.sh) MCP
-Discovers subdomains by querying SSL certificate transparency logs without active scanning.
-
-### Amass MCP
+### Amass MCP  
 Advanced reconnaissance tool for subdomain enumeration and intelligence gathering with both passive and active modes.
 
-### httpx MCP
+### arjun MCP  
+Discovers hidden HTTP parameters on web applications by scanning URLs, supporting custom wordlists, multiple methods, and adjustable scanning speeds.
+
+### Certificate Search (crt.sh) MCP  
+Discovers subdomains by querying SSL certificate transparency logs without active scanning.
+
+### FFUF MCP Server  
+URL-based fuzzing tool with support for all FFUF command line arguments.
+
+### HTTP Headers Security MCP  
+Analyzes HTTP response headers against OWASP security standards with recommendations.
+
+### httpx MCP  
 Performs high-speed probing of discovered subdomains to validate alive hosts, fetch response details, and enrich reconnaissance data without heavy scanning.
 
-### shuffledns MCP
+### Masscan MCP Server  
+Fast port scanning tool for target-based port discovery across networks.
+
+### MobSF MCP Server  
+Mobile application security testing framework for Android, iOS, and Windows applications.
+
+### Nmap MCP Server  
+Full-featured network scanner with detailed service fingerprinting and vulnerability detection.
+
+### Nuclei MCP Server  
+Template-based vulnerability scanner with an extensive library of security checks.
+
+### shuffledns MCP  
 High-speed DNS brute-forcing and mass subdomain resolution tool to quickly discover valid subdomains using custom resolvers and wordlists.
 
-### arjun MCP 
-Discovers hidden HTTP parameters on web applications by scanning URLs, supporting custom wordlists, multiple methods, and adjustable scanning speeds.
+### SQLmap MCP Server  
+SQL injection testing tool with comprehensive capabilities for vulnerability discovery.
+
+### SSLScan MCP Server  
+SSL/TLS configuration analyzer for identifying weak ciphers and security misconfigurations.
+
+### Waybackurls MCP  
+Retrieves historical URLs from the Wayback Machine to discover forgotten endpoints.
 
 ## TO-DO Tools 
 - assetfinder
