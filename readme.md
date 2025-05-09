@@ -20,6 +20,7 @@ This repository contains Model Context Protocol (MCP) server implementations for
 | Amass | Advanced subdomain enumeration and reconnaissance tool | [Amass MCP Documentation](./amass-mcp) |
 | httpx | Fast and multi-purpose HTTP toolkit for port scanning. | [httpx MCP Documentation](./httpx-mcp) |
 | shuffledns | High-speed and customizable DNS brute-forcing and resolution tool | [shuffledns MCP Documentation](./shuffledns-mcp) |
+| arjun | Run Arjun to discover hidden HTTP parameters | [Arjun MCP Documentation](./arjun-mcp) |
 
 ## Quick Reference
 
@@ -65,9 +66,37 @@ Performs high-speed probing of discovered subdomains to validate alive hosts, fe
 ### shuffledns MCP
 High-speed DNS brute-forcing and mass subdomain resolution tool to quickly discover valid subdomains using custom resolvers and wordlists.
 
+### arjun MCP 
+Discovers hidden HTTP parameters on web applications by scanning URLs, supporting custom wordlists, multiple methods, and adjustable scanning speeds.
+
 ## TO-DO Tools 
-- massdns
+- assetfinder
+- cero
+- commix
+- Corsy
+- CrackMapExec
+- crlfuzz
+- dalfox
+- dnsrecon
+- feroxbuster
+- gau
+- getJS
+- github-endpoints
+- github-subdomains
+- gobuster
+- gospider
 - gowitness
+- hakrawler
+- kiterunner
+- medusa
+- naabu
+- ParamSpider
+- puredns
+- s3scanner
+- tlsx
+- wafw00f
+- webscreenshot
+- wpscan
 - ...
 
 ## Development
