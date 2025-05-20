@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const mcp_js_1 = require("@modelcontextprotocol/sdk/server/mcp.js");
 const stdio_js_1 = require("@modelcontextprotocol/sdk/server/stdio.js");
-const zod_1 = require("zod");
+const z = require('zod');
 const pty = require('node-pty');
 const args = process.argv.slice(2);
 if (args.length === 0) {
@@ -15,7 +15,7 @@ const server = new mcp_js_1.McpServer({
     version: "1.0.0",
 });
 server.tool("do-assetfinder", "Find related domains and subdomains using assetfinder for a given target.", {
-    target: zod_1.z.string().describe("The root domain (e.g., example.com) to discover associated subdomains and related domains."),
+    target: z.string().describe("The root domain (e.g., example.com) to discover associated subdomains and related domains."),
 }, async ({ target }) => {
     const assetfinderArgs = ["-subs-only", target];
     let output = "";

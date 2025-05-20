@@ -1,6 +1,6 @@
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
-import { z } from "zod";
+const z = require('zod');
 const pty = require('node-pty');
 const args = process.argv.slice(2);
 if (args.length === 0) {
