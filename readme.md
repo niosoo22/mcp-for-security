@@ -66,7 +66,7 @@ Full-featured network scanner with detailed service fingerprinting and vulnerabi
 ### Nuclei MCP Server  
 Template-based vulnerability scanner with an extensive library of security checks.
 
-### ScoutSuite MCP Server 
+### Scout Suite MCP Server 
 Performs a multi-service cloud security audit by analyzing cloud configurations and highlighting potential misconfigurations and risks based on best practices.
 
 ### shuffledns MCP  
