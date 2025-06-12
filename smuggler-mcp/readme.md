@@ -96,7 +96,7 @@ Smuggler found a potential CL.TE vulnerability using mutation XYZ...
 - Use responsibly and ethically
 
 
-## Troubleshooting
+## Troubleshooting
 
 1. Verify Python and smuggler.py are accessible and working
 2. Ensure the paths in your configuration are correct

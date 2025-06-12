@@ -22,6 +22,7 @@ This repository contains Model Context Protocol (MCP) server implementations for
 | Scout Suite | Cloud security auditing tool for assessing configurations across multiple services | [Scout Suite MCP Documentation](./scoutsuite-mcp/) |
 | SSLScan | SSL/TLS configuration analyzer for security assessment | [SSLScan MCP Documentation](./sslscan-mcp/) |
 | shuffledns | High-speed and customizable DNS brute-forcing and resolution tool | [shuffledns MCP Documentation](./shuffledns-mcp) |
+| Smuggler | Advanced tool for detecting HTTP Request Smuggling vulnerabilities | [Smuggler MCP Documentation](./smuggler-mcp) |
 | SQLmap | Advanced SQL injection detection and exploitation tool | [SQLmap MCP Documentation](./sqlmap-mcp/) |
 | Waybackurls | Tool for retrieving historical URLs from the Wayback Machine | [Waybackurls MCP Documentation](./waybackurls-mcp/) |
 
@@ -71,6 +72,9 @@ Performs a multi-service cloud security audit by analyzing cloud configurations 
 
 ### shuffledns MCP  
 High-speed DNS brute-forcing and mass subdomain resolution tool to quickly discover valid subdomains using custom resolvers and wordlists.
+
+### smuggler MCP  
+HTTP Request Smuggling detection tool that identifies desynchronization vulnerabilities between front-end and back-end servers.
 
 ### SQLmap MCP Server  
 SQL injection testing tool with comprehensive capabilities for vulnerability discovery.
