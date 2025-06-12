@@ -4,8 +4,8 @@ import { z } from "zod";
 import { spawn } from 'child_process';
 
 const args = process.argv.slice(2);
-if (args.length === 0) {
-    console.error("Usage: smuggler-mcp [smuggler.py path]");
+if (args.length !== 2) {
+    console.error("Usage: smuggler-mcp [python path] [smuggler.py path]");
     process.exit(1);
 }
 
@@ -31,11 +31,11 @@ server.tool(
         -verify VERIFY       Verify findings with more requests; never, quick or thorough (default: quick)`)
     },
     async ({ url, smuggler_args = [] }) => {
-        const baseArgs = [args[0], "-u", url];
+        const baseArgs = [args[1],"-u", url];
         const allArgs = [...baseArgs, ...smuggler_args];
         let output = '';
 
-        const smuggler = spawn('python3', allArgs);
+        const smuggler = spawn(args[0],allArgs);
 
         smuggler.stdout.on('data', (data) => {
             output += data.toString();

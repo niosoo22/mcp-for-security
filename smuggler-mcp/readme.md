@@ -12,25 +12,32 @@ Smuggler MCP allows you to use the Smuggler HTTP Request Smuggling testing tool 
 
 - Node.js (v16+)
 - Python 3.x
-- Git
+- Smuggler (smuggler.py) downloaded from [defparam/smuggler](https://github.com/defparam/smuggler)
 
-### Quick Setup
+### Setup
 
-```bash
-git clone https://github.com/username/smuggler-mcp
-cd smuggler-mcp
-./run.sh
-```
+1. Clone this repository:
+   ```
+   git clone https://github.com/cyproxio/mcp-for-security
+   cd smuggler-mcp
+   ```
 
-The `run.sh` script automatically:
-- Downloads Smuggler
-- Installs required node modules
-- Compiles the project
-- Starts the MCP server
+2. Install dependencies:
+   ```
+   npm install
+   ```
+
+3. Build the project:
+   ```
+   npm run build
+   ```
+
 
 ## Usage
 
-Add to your MCP client configuration:
+### Basic Configuration
+
+To configure the Smuggler MCP server in your MCP client setup:
 
 ```json
 {
@@ -38,6 +45,7 @@ Add to your MCP client configuration:
     "command": "node",
     "args": [
       "/path/to/smuggler-mcp/build/index.js",
+      "/path/to/python"
       "/path/to/smuggler/smuggler.py"
     ]
   }
@@ -69,14 +77,32 @@ const result = await mcp.tools.invoke("do-smuggler", {
   - `-x`: Exit on first finding
   - `--verify`: Level of verification for findings
 
-## Security Warning
+## Integration with AI Assistants
+Smuggler MCP is designed to work with AI assistants that support the Model Context Protocol, enabling natural language interactions for vulnerability testing.
 
-- Obtain necessary permissions before testing websites
-- Use in an ethical manner
+```
+User: Can you test this internal site for HTTP request smuggling? http://internal.corp
+AI: Running HTTP Request Smuggling tests on http://internal.corp using Smuggler...
 
-## License
+[AI runs Smuggler MCP and returns the parsed results]
 
-MIT
+Smuggler found a potential CL.TE vulnerability using mutation XYZ...
+```
+## Security Considerations
+
+- Use Smuggler only with explicit authorization
+- Target only systems you own or have permission to test
+- Avoid triggering backend systems unintentionally
+- Use responsibly and ethically
+
+
+## Troubleshooting
+
+1. Verify Python and smuggler.py are accessible and working
+2. Ensure the paths in your configuration are correct
+3. Check output logs for Python errors
+4. Use verbose logging for debugging
+
 
 ## Acknowledgements
 
