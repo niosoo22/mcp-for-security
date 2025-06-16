@@ -1,0 +1,18 @@
+# .gitpod.yml
+image:
+  file: .gitpod.Dockerfile
+
+ports:
+  - port: 8777
+    onOpen: ignore
+  - port: 15672
+    onOpen: open-preview
+
+tasks:
+  - name: Start SQLMap MCP
+    init: docker-compose up -d
+    command: |
+      echo "SQLMap MCP Server is running"
+      echo "- Management UI: http://localhost:15672 (guest/guest)"
+      echo "- API Endpoint: http://localhost:8777"
+      sleep infinity
