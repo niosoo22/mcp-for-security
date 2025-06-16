@@ -1,0 +1,31 @@
+# docker-compose.yml
+version: '3'
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+
+  mcp-sqlmap:
+    image: acuvity/mcp-server-sqlmap
+    ports:
+      - "8777:8777"
+    environment:
+      RABBITMQ_HOST: rabbitmq
+      RABBITMQ_PORT: 5672
+      RABBITMQ_USER: guest
+      RABBITMQ_PASSWORD: guest
+      MONGODB_HOST: mongodb
+      MONGODB_PORT: 27017
+    depends_on:
+      - rabbitmq
+      - mongodb
+
+  mongodb:
+    image: mongo:4.2
+    ports:
+      - "27017:27017"
